@@ -1,0 +1,417 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+    
+}
+
+
+header{
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80px;    
+    color: white;
+    background-color: rgba(6, 6, 6, .7);
+    
+}
+header nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    width: 100%;
+    /* border: 1px solid blue; */
+}
+header nav .header{
+    display: flex;
+    justify-content: flex-end;
+    /* border: 1px solid black; */
+    width: auto;
+}
+
+header nav .header li{
+    margin-right: 20px;
+    list-style: none;
+    color: gray;
+    /* border: 1px solid red; */
+}
+header nav .header li a{
+    text-decoration: none;
+    color: white;        
+}
+
+figure{
+    display: flex;
+    justify-content: space-evenly;    
+}
+
+
+.logo .i{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+/* -------------------------Aqui termina el header---------------------------- */
+
+.contenedor{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.iPhone{
+    width: 750px;
+    height: 450px;
+    border-radius: 18px;
+    border: 2px solid gray;
+    margin-top: 100px;
+    display: -webkit-box;
+    background: url(../Iconos/Background.JPG);
+    background-position: center;
+    
+        
+}
+/* .pantalla{
+    width: 750px;
+    height: 450px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    border: 1px solid red;
+    border-radius: 18px;
+} */
+
+
+.flecha-derecha,
+.flecha-izquierda{
+   position: absolute;
+   display: none;
+}
+
+.flecha-derecha{
+    right: 0;
+}
+.flecha-izquierda{
+    left: 0;
+}
+button{
+    width: 20px;
+    height: 50px;
+    /* border: 1px solid red; */
+}
+
+/* ---------------------------Aqui empieza la barra------------------------------ */
+
+.contenedor-barra{
+    width: 750px;
+    height: 20px;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+.barra{
+    width: 650px;
+    height: 100%;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.espacio{
+    width: 100px;
+    height: 100%;
+    background: #f8f8f8;
+    border-top-right-radius: 18px;
+}
+
+.reloj,
+.bateria,
+.signal{
+width: 100px;
+height: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+/* border: 1px solid green; */
+}
+.bateria{
+    justify-content: flex-end;    
+}
+.bateria i{
+    padding: 0 6px;
+}
+
+.signal{
+    justify-content: space-between;
+}
+.signal-cel i,
+.telcel i,
+.wifi i{
+    padding: 0 6px;
+}
+/* ----------------------aqui empieza contenedor iconos---------------------------------- */
+
+.contenedor-pantalla{
+    width: 100%;
+    height: 430px;
+    display: flex;
+    /* align-items: flex-end; */
+    /* border: 1px solid red */
+}
+.contenedor-iconos{
+    width: 650px;
+    height: 430px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-end;
+    /* border: 1px solid blue; */
+    overflow: hidden;
+    scroll-behavior: smooth;
+    /* overflow-x: scroll; */
+}
+
+.iconos{
+    width: 650px;
+    height: 430px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 1px solid black; */
+}
+
+.linea{
+    width: 650px;
+    height: 25%;
+    /* border: 1px solid yellow; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.icono{
+    width: 70px;
+    height: 70px;
+    /* border: 1px solid brown; */
+    border-radius: 18px;
+}
+.icono a{
+    text-decoration: none;
+    list-style: none;
+}
+
+.icono:hover{
+    transform: scale(1.1);
+}
+.icono img{
+    border-radius: 18px;
+    width: 70px;
+    height: 70px;
+}
+figcaption{
+    font-size: small;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+figcaption i{
+    margin-right: 4px;
+    color: rgba(0, 0, 0, .6);
+}
+
+.dock{
+    width: 100px;
+    height: 100%;
+    display: inherit;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    /* border: 1px solid red; */
+    background: #f8f8f8;
+    border-bottom-right-radius: 18px;
+
+}
+/* ----------------------aqui esta la carpeta---------------------------------- */
+
+.overlay {
+    background: rgba(0, 0, 0, 0);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+}
+.overlay.active{
+    visibility: visible;
+    
+}
+.popup{
+    background: #f8f8f8;
+    width: 300px;
+    height: 300px;
+    border-radius: 18px;    
+    /* border: 1px solid gray; */
+    transition: .5s ease all;
+    transform: scale(0.2);
+    opacity: 0;
+
+
+
+}
+.abrir-popup a{
+    list-style: none;
+    text-decoration: none;
+    color: rgba(0, 0, 0, .6);
+
+}
+.abrir-popup{
+    /* border: 1px solid red; */
+    background: #f8f8f8;
+}
+
+
+.popup.active{
+    opacity: 1;
+    transform: scale(1);
+
+}
+.carpeta{
+    width: 100%;
+    height: 100%;
+    border: none;
+
+}
+
+.linea-carpeta{
+    width: 100%;
+    height: 33%;
+    /* border: 1px solid yellow; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+.icono-carpeta{
+    width: 70px;
+    height: 70px;
+    /* border: 1px solid red; */
+    border-radius: 18px;
+
+}
+.icono-carpeta:hover{
+    transform: scale(1.1);
+}
+.icono-carpeta img{
+    border-radius: 18px;
+}
+.popup a{
+    list-style: none;
+    text-decoration: none;
+    color: rgba(0, 0, 0, .6);
+}
+/* ----------------------------carpeta mini--------------------------------------- */
+
+.carpeta-mini{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.lineas-mini{
+    width: 100%;
+    height: 30%;
+    /* border: 1px solid yellow; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.iconos-mini{
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+    margin: 1px;
+    /* border: 1px solid purple; */
+}
+.iconos-mini img{
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+}
+
+
+/* ----------------------aqui estan los dots---------------------------------- */
+
+.dots{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid red; */
+}
+.dots button{
+    width: 10px;
+    height: 10px;
+    margin: 10px;
+    border-radius: 50%;
+    background-color: rgba(128,128,128,.5);
+    color: rgba(128,128,128,.5);
+    padding: 0;
+    border: none;
+    cursor: pointer;
+   
+
+}
+
+
+.dots button.activo{
+    background: rgba(0, 0, 0, .9);
+}
+
+.dots button:hover{
+    background: rgba(0, 0, 0, .9);
+
+}
+
+
+
+
+
+/* -------------------------Aqui empiza el footer---------------------------- */
+
+footer{
+    width: 100%;
+    height: 20px;
+    padding: 10px 0 10px 0;
+    display:flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    /* border: 1px solid red; */
+}
+
+#Firma{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0 10px 0;
+}
+#Firma i{
+    padding-left: 10px;
+}
